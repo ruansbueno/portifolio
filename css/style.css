@@ -195,11 +195,6 @@ section#modal h2{
     font-size: 25px;
 }
 
-
-
-
-
-
 /* OBS: SEI QUE ORDEM DAS MEDIAS QUERIES ESTÁ ALTERADA E POR ISSO FORAM UTILIZADOS ALGUS '!important'. SEI QUE NÃO É O IDEAL, ENTRATANTO, POR QUESTÕES DE TEMPO NÃO PUDE REFATORAR */
 
 @media screen and (max-width: 768px) {
@@ -289,13 +284,13 @@ section#modal h2{
 
 @media screen and (max-width: 450px){
     header section.logo h1{
-        font-size: 15px;
-        line-height: 17px;
+        font-size: 20px;
+        line-height:21px;
     }
 
     header section.contato a{
         padding: 10px 20px;
-        font-size: 10px;
+        font-size: 13px;
     }
 
     main section.banner h2{
