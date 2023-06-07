@@ -1,0 +1,418 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'Krona one', sans-serif;
+    height: 100%;
+}
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+span{
+    /* color: #F27C22; */
+    color: #dd1919;
+}
+
+#loader{
+    position:fixed;
+    left: 0;
+    top:0;
+    height: 6px;
+    background-color: #dd1919;
+    border-radius: 5px;
+    transition: .4s;
+}
+
+header .container{
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header section.logo h1{
+    max-width: 50px;
+    line-height: 25px;
+    font-size: 25px;
+}
+
+header section.contato a{
+    border: 1px solid #000;
+    padding: 12px 40px;
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #000;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+header section.contato a:hover{
+    background-color: #f3eded;
+}
+
+main{
+    margin: 30px 0px;
+}
+
+main .container .banner-wraper{
+    display: flex;
+    justify-content: center;
+}
+
+main section.banner h2{
+    font-size:75px;
+    text-align: center;
+    letter-spacing: 8px;
+}
+
+main section.banner .icons{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main section.banner .icons img{
+    width: 85px;
+    margin:20px;
+}
+
+main section.sobre {
+    margin: 100px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+}
+
+main section.sobre section.sobre-content{
+    width: 50%;
+}
+
+main section.sobre section.sobre-content img{
+    width: 150px;
+    margin-bottom: 50px;
+}
+
+main section.sobre section.sobre-content p{
+    font-size: 22px;
+}
+
+main section.sobre section.sobre-perfil img{
+    border-radius: 45%;
+    max-width: 450px;
+}
+
+main section.certificados{
+    margin-top: 100px;
+    padding: 0 3%;
+}
+
+main section.certificados h2{
+    text-align: center;
+    font-size: 70px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+main section.certificados section.certificados-wraper {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+main section.certificados article.certificado-single {
+    width: 50%;
+    height: 300px;
+    display: flex;
+    align-items:start;
+    padding: 20px;
+}
+
+main section.certificados article.certificado-single:nth-child(2){
+    align-items:end;
+}
+
+main section.certificados article.certificado-single img{
+    width: 200px;
+}
+
+main section.certificados article.certificado-single section{
+    display: flex;
+    align-items:center;
+}
+
+main section.certificados article.certificado-single section div{
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+section#modal{
+    width: 40%;
+    height: 340px;
+    border-radius: 50px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .4s;
+}
+
+section#modal h2{
+    margin-bottom: 20px;
+}
+
+#cover{
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: .4s;
+}
+
+#exit{
+    position: absolute;
+    right: 35px;
+    top: 25px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+
+
+
+
+
+/* OBS: SEI QUE ORDEM DAS MEDIAS QUERIES ESTÁ ALTERADA E POR ISSO FORAM UTILIZADOS ALGUS '!important'. SEI QUE NÃO É O IDEAL, ENTRATANTO, POR QUESTÕES DE TEMPO NÃO PUDE REFATORAR */
+
+@media screen and (max-width: 768px) {
+
+    header section.logo h1{
+        font-size: 20px;
+    }
+
+    header section.contato a{
+        padding: 12px 40px;
+        font-size: 12px;
+    }
+
+    main section.banner h2{
+        font-size: 60px;
+        letter-spacing: 5px;
+    }
+
+    main section.banner .icons{
+        margin-bottom: 10px;
+    }
+
+    main section.banner .icons img{
+        width: 60px;
+        margin:15px;
+    }
+    
+    main section.sobre {
+        margin: 70px 0;
+        display: flex;
+        justify-content: center;
+        padding: 0 3%;
+        flex-direction: column-reverse;
+    }
+
+    main section.sobre section.sobre-content{
+        width: 100%;
+    }
+
+    main section.sobre section.sobre-content img{
+        width: 150px;
+        margin-bottom: 50px;
+        display: none;
+    }
+
+    main section.sobre section.sobre-content p{
+        text-align: center;
+        font-size: 15px;
+    }
+
+    main section.sobre section.sobre-perfil{
+        text-align: center;
+    }
+
+    main section.sobre section.sobre-perfil img{
+        border-radius: 40%;
+        width: 70%;
+        margin-bottom: 70px;
+    }
+
+    main section.certificados{
+        margin-top: 50px;
+        padding: 0 3%;
+    }
+
+    main section.certificados section.certificados-wraper {
+        margin-top: 50px;
+    }
+
+    main section.certificados h2{
+        font-size: 35px !important;
+        width: 100%;
+    }
+
+    main section.certificados article.certificado-single {
+        width: 100%;
+        height: auto !important;
+        display: flex;
+        align-items:start;
+        padding: 20px;
+    }
+
+    main section.certificados article.certificado-single:nth-child(2) section{
+        flex-direction: row-reverse;
+    }
+}
+
+@media screen and (max-width: 450px){
+    header section.logo h1{
+        font-size: 15px;
+        line-height: 17px;
+    }
+
+    header section.contato a{
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+
+    main section.banner h2{
+        font-size: 35px;
+        letter-spacing: 3px;
+    }
+
+    main section.banner .icons{
+        margin-bottom: 7px;
+    }
+
+    main section.banner .icons img{
+        width: 40px;
+        margin:10px;
+    }
+
+    main section.sobre section.sobre-content p{
+        font-size: 14px;
+    }
+
+    main section.sobre section.sobre-perfil img{
+        margin-bottom: 50px;
+    }
+
+
+    main section.certificados article.certificado-single{
+        font-size: 70% !important;
+        margin-bottom: 25px;
+    }
+
+    main section.certificados article.certificado-single img{
+        width: 100px !important;
+    }
+
+    section#modal{
+        font-size: 80%;
+        padding: 10px !important;
+        border-radius: 25px !important;
+    }
+}
+
+@media screen and (max-width:550px){
+    section#modal{
+        width: 80% !important;
+    }
+}
+
+@media screen and (max-width:1000px){
+    main section.sobre section.sobre-perfil img{
+        border-radius: 45%;
+        max-width:350px;
+    }
+
+    main section.certificados h2{
+        font-size: 60px;
+    }
+
+    main section.certificados article.certificado-single {
+        height: 250px;
+        display: flex;
+        align-items:start;
+        padding: 10px;
+    }
+
+    main section.certificados article.certificado-single img{
+        width: 150px;
+    }
+
+    main section.certificados article.certificado-single {
+        font-size: 80%;
+    }
+
+        
+    section#modal{
+        width: 60%;
+        height: 340px;
+        border-radius: 50px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: .4s;
+    }
+
+    section#modal h2{
+        margin-bottom: 20px;
+    }
+
+    #cover{
+        background-color: rgba(0, 0, 0, .5);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        transition: .4s;
+    }
+
+    #exit{
+        position: absolute;
+        right: 35px;
+        top: 25px;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (min-width: 1280px){
+    header .container{
+        padding: 20px;
+    }
+}
