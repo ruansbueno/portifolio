@@ -282,15 +282,15 @@ section#modal h2{
     }
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 500px){
     header section.logo h1{
-        font-size: 20px;
-        line-height:21px;
+        font-size: 16px;
+        line-height: 18px;
     }
 
     header section.contato a{
         padding: 10px 20px;
-        font-size: 13px;
+        font-size: 12px;
     }
 
     main section.banner h2{
